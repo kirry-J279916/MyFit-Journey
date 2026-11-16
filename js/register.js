@@ -55,10 +55,10 @@ function validateForm(e) {
 	}
 	
 	// Validate the zip code:
-	if (/^\d{5}(-\d{4})?$/.test(zip.value)) {
+	if (/^\d{4}$/.test(zip.value)) {
 		removeErrorMessage('zip');
 	} else {
-			addErrorMessage('zip', 'Please enter your zip code.');
+			addErrorMessage('zip', 'Please enter your postcode.');
 		error = true;
 	}
 
