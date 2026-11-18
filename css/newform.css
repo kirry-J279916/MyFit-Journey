@@ -77,16 +77,25 @@ span.error{
 
 
 
-/* === Navigation === */
-.topNavigation {
+/* === Header + Navigation === */
+.headerNavigation {
   background-color: #8f877f;
   overflow: hidden;
   padding: 10px;
   margin: 20px;
 }
 
+.headerNavigation #brandName {
+	color: white;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	text-decoration: none;
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 30px;
+}
+
 /* link style */
-.topNavigation a {
+.headerNavigation a {
   color: white;
   text-align: center;
   margin: 10px;
@@ -95,13 +104,21 @@ span.error{
 }
 
 /* link hover */
-.topNavigation a:hover {
+.headerNavigation a:hover {
   background-color: white;
   color: black;
 }
 
 /* active link */
-.topNavigation a.active {
+.headerNavigation a.active {
   background-color: white;
   color: black;
+}
+
+
+
+
+/* === Main Text === */
+#mainText {
+	margin: 20px;
 }
