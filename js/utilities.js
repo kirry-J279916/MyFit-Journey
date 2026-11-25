@@ -14,8 +14,7 @@ var U = {
     // Function for setting the text of an element:
     setText: function(id, message) {
         'use strict';
-        if ( (typeof id == 'string')
-        && (typeof message == 'string') ) {
+        if ( (typeof id == 'string') && (typeof message == 'string') ) {
 
             // Get a reference to the element:
             var output = this.$(id);
@@ -69,7 +68,7 @@ var U = {
         'use strict';
 
         // Get the event object:
-        if (typeof e == 'undefined') var e = window.event;
+        if (typeof e == 'undefined') e = window.event;
 
         // Get the event target:
         var target = e.target || e.srcElement;
@@ -81,7 +80,7 @@ var U = {
         'use strict';
 
         // Get the event object:
-        if (typeof e == 'undefined') var e = window.event;
+        if (typeof e == 'undefined') e = window.event;
 
         // Get the event target:
         var target = e.target || e.srcElement;
