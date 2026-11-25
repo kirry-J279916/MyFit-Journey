@@ -29,6 +29,14 @@ function validateForm(e) {
 		addErrorMessage('firstName', 'Please enter your first name.');
 		error = true;
 	}
+
+	// Validate the last name:
+	if (/^[A-Z \.\-']{2,20}$/i.test(lastName.value)) {
+		removeErrorMessage('lastName');
+	} else {
+		addErrorMessage('lastName', 'Please enter your last name.');
+		error = true;
+	}
 	
 	// Validate the email address:
 	if (/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/.test(email.value)) {
@@ -43,6 +51,14 @@ function validateForm(e) {
 		removeErrorMessage('phone');
 	} else {
 		addErrorMessage('phone', 'Please enter your phone number.');
+		error = true;
+	}
+
+	// Validate the city:
+	if (/^[A-Z \.\-']{2,20}$/i.test(city.value)) {
+		removeErrorMessage('city');
+	} else {
+		addErrorMessage('city', 'Please enter your city.');
 		error = true;
 	}
 	
@@ -61,6 +77,14 @@ function validateForm(e) {
 			addErrorMessage('zip', 'Please enter your postcode.');
 		error = true;
 	}
+
+	// Validate the terms checkbox:
+    if (terms.checked) {
+        removeErrorMessage('terms');
+    } else {
+        addErrorMessage('terms', 'Please accept the terms.');
+        error = true;
+    }
 
     // If an error occurred, prevent the default behavior:
 	if (error) {
