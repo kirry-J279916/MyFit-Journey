@@ -50,3 +50,54 @@ function removeErrorMessage(id) {
 	} // End of IF.
     
 } // End of removeErrorMessage() function.
+
+
+// This function adds the valid message.
+// It takes two arguments: the form element ID and the message.
+function addValidMessage(id, msg) {
+   	'use strict';
+    
+    // Get the form element reference:
+    var elem = document.getElementById(id);
+    
+    // Define the new span's ID value:
+    var newId = id + 'Valid';
+    
+    // Check for the existence of the span:
+    var span = document.getElementById(newId);
+    if (span) {
+        span.firstChild.value = msg; // Update
+    } else { // Create new.
+    
+        // Create the span:
+        span = document.createElement('span');
+        span.id = newId;
+		span.className = 'valid';
+        span.appendChild(document.createTextNode(msg));
+        
+        // Add the span to the parent:
+        elem.parentNode.appendChild(span);
+        elem.previousSibling.className = 'valid';
+
+    } // End of main IF-ELSE.
+
+} // End of addValidMessage() function.
+
+// This function removes the valid message.
+// It takes one argument: the form element ID.
+function removeValidMessage(id) {
+   	'use strict';
+
+    // Get a reference to the span:
+    var span = document.getElementById(id + 'Valid');
+	if (span) {
+    
+	    // Remove the class from the label:
+	    span.previousSibling.previousSibling.className = null;
+    
+	    // Remove the span:
+	    span.parentNode.removeChild(span);
+
+	} // End of IF.
+    
+} // End of removeValidMessage() function.

@@ -25,7 +25,9 @@ function validateForm(e) {
 	// Validate the first name:
 	if (/^[A-Z \.\-']{2,20}$/i.test(firstName.value)) {
 		removeErrorMessage('firstName');
+		addValidMessage('firstName', '✓');
 	} else {
+		removeValidMessage('firstName');
 		addErrorMessage('firstName', 'Please enter your first name.');
 		error = true;
 	}
@@ -33,7 +35,9 @@ function validateForm(e) {
 	// Validate the last name:
 	if (/^[A-Z \.\-']{2,20}$/i.test(lastName.value)) {
 		removeErrorMessage('lastName');
+		addValidMessage('lastName', '✓');
 	} else {
+		removeValidMessage('lastName');
 		addErrorMessage('lastName', 'Please enter your last name.');
 		error = true;
 	}
@@ -41,7 +45,9 @@ function validateForm(e) {
 	// Validate the email address:
 	if (/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/.test(email.value)) {
 		removeErrorMessage('email');
+		addValidMessage('email', '✓');
 	} else {
+		removeValidMessage('email');
 		addErrorMessage('email', 'Please enter your email address.');
 		error = true;
 	}
@@ -49,7 +55,9 @@ function validateForm(e) {
 	// Validate the phone number:
 	if (/\d{3}[ \-\.]?\d{3}[ \-\.]?\d{4}/.test(phone.value)) {
 		removeErrorMessage('phone');
+		addValidMessage('phone', '✓');
 	} else {
+		removeValidMessage('phone');
 		addErrorMessage('phone', 'Please enter your phone number.');
 		error = true;
 	}
@@ -57,7 +65,9 @@ function validateForm(e) {
 	// Validate the city:
 	if (/^[A-Z \.\-']{2,20}$/i.test(city.value)) {
 		removeErrorMessage('city');
+		addValidMessage('city', '✓');
 	} else {
+		removeValidMessage('city');
 		addErrorMessage('city', 'Please enter your city.');
 		error = true;
 	}
@@ -65,7 +75,9 @@ function validateForm(e) {
 	// Validate the state:
 	if (state.selectedIndex != 0) {
 		removeErrorMessage('state');
+		addValidMessage('state', '✓');
 	} else {
+		removeValidMessage('state');
 		addErrorMessage('state', 'Please select your state.');
 		error = true;
 	}
@@ -73,8 +85,10 @@ function validateForm(e) {
 	// Validate the zip code:
 	if (/^\d{4}$/.test(zip.value)) {
 		removeErrorMessage('zip');
+		addValidMessage('zip', '✓');
 	} else {
-			addErrorMessage('zip', 'Please enter your postcode.');
+		removeValidMessage('zip');
+		addErrorMessage('zip', 'Please enter your postcode.');
 		error = true;
 	}
 

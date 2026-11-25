@@ -62,8 +62,8 @@ div.one {
 	width: 10em;
 	padding: 0.5em;
 	font-weight: normal;
-	color: #FFF;
-	background-color: #88A61B;
+	color: black;
+	background-color: #c3ffe4;
 	border:solid 2px #0E3D59;
 }
 
@@ -71,6 +71,12 @@ div.one {
 	color: #D92525;
 }
 span.error{
+	padding-left: 10px;
+}
+.valid {
+    color: #1ba848;
+}
+span.valid{
 	padding-left: 10px;
 }
 
